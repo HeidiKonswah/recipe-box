@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+body {
+  background-color: #FAF9F9;
+  font-family: "Roboto", sans-serif; }
+  body .header {
+    font-family: "Pacifico", cursive;
+    color: #555B6E;
+    text-align: center; }
+    body .header h2 {
+      display: inline-block; }
+    body .header .material-icons {
+      float: right;
+      color: #555B6E;
+      font-size: 1.8em;
+      margin: 10px;
+      margin-top: 25px;
+      cursor: pointer; }
+  body .empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ddd;
+    height: 400px; }
+  body .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(300px, auto);
+    grid-gap: 2em; }
+    @media screen and (min-width: 800px) and (max-width: 1000px) {
+      body .gridContainer {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 50px;
+        margin-right: 50px; } }
+    @media screen and (min-width: 400px) and (max-width: 800px) {
+      body .gridContainer {
+        grid-template-columns: 1fr;
+        margin-left: 50px;
+        margin-right: 50px; } }
+    @media screen and (min-width: 100px) and (max-width: 500px) {
+      body .gridContainer {
+        margin: auto; } }
+  body .card-div {
+    box-shadow: 1px 1px 5px #ddd;
+    background-color: #fff;
+    padding: 15px; }
+    body .card-div h3 {
+      background-color: #FFEADD;
+      color: #555B6E;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 10px;
+      margin-top: 2%; }
+    body .card-div h4 {
+      margin-left: 5%;
+      color: #555B6E; }
+    body .card-div p {
+      padding: 20px;
+      padding-top: 0px; }
+    body .card-div ul {
+      padding: 20px;
+      padding-top: 0px;
+      list-style-type: none; }
+      body .card-div ul li {
+        padding: 10px;
+        border-bottom: 1px solid #FFEADD; }
+    body .card-div i {
+      color: #D1C0B5;
+      font-size: 1.3em;
+      padding: 10px;
+      cursor: pointer;
+      float: right; }
+    body .card-div i:hover {
+      color: #746B65; }
+    body .card-div input, body .card-div textarea {
+      margin: 15px;
+      border: none;
+      border-bottom: 2px solid #FFEADD;
+      padding: 5px;
+      width: 80%; }
+    body .card-div span {
+      font-weight: bold;
+      color: #555B6E;
+      margin-top: 10px;
+      margin-bottom: 10px; }
+      body .card-div span .commaNote {
+        font-size: 12px;
+        font-weight: lighter; }
+    body .card-div textarea {
+      border: 2px solid #FFEADD;
+      height: 100px; }
+  body .card-div:hover {
+    box-shadow: 5px 5px 5px #ddd; }
+  body .modalForm {
+    display: none;
+    position: absolute;
+    top: 13%;
+    width: 50%;
+    left: 25%;
+    right: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    box-shadow: 5px 5px 15px #999;
+    color: #555B6E;
+    z-index: 10; }
+    @media screen and (min-width: 100px) and (max-width: 700px) {
+      body .modalForm {
+        width: 80%;
+        left: 10%;
+        right: 10%; } }
+    body .modalForm .modalHead {
+      font-family: "Pacifico", cursive;
+      width: 100%;
+      text-align: center;
+      color: #555B6E;
+      background-color: #FFEADD;
+      padding: 5px 0px; }
+    body .modalForm .modalContent {
+      padding: 10px 20px; }
+      body .modalForm .modalContent span {
+        font-weight: bold; }
+        body .modalForm .modalContent span .commaNote {
+          font-size: 12px;
+          font-weight: lighter;
+          color: #555B6E; }
+      body .modalForm .modalContent input, body .modalForm .modalContent textarea {
+        margin: 5px 0px;
+        padding: 5px;
+        border: none;
+        border-bottom: 2px solid #FFEADD;
+        width: 100%; }
+      body .modalForm .modalContent textarea {
+        height: 70px; }
+    body .modalForm .modalFoot {
+      width: 100%;
+      color: #555B6E;
+      background-color: #FFEADD;
+      display: flex;
+      justify-content: flex-end; }
+      body .modalForm .modalFoot i {
+        padding: 10px;
+        cursor: pointer;
+        color: #555B6E; }
+      body .modalForm .modalFoot i:hover {
+        font-weight: bolder; }
+  body .pageMask {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); }

@@ -1,0 +1,165 @@
+//Colors
+$blackCoral: #555B6E
+$peach: #D1C0B5
+$darkPeach: #746B65
+$lightPeach: #FFEADD
+$snow: #FAF9F9
+$darkGrey: #ddd
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto')
+@import url('https://fonts.googleapis.com/css?family=Pacifico')
+$font: 'Roboto', sans-serif
+$header-font: 'Pacifico', cursive
+
+body
+  background-color: $snow
+  font-family: $font
+
+  .header
+    font-family: $header-font
+    color: $blackCoral
+    text-align: center
+    h2
+      display: inline-block
+    .material-icons
+      float: right
+      color: $blackCoral
+      font-size: 1.8em
+      margin: 10px
+      margin-top: 25px
+      cursor: pointer
+  .empty
+    display: flex
+    justify-content: center
+    align-items: center
+    color: $darkGrey
+    height: 400px
+  .gridContainer
+    display: grid
+    grid-template-columns: repeat(3,1fr)
+    grid-auto-rows: minmax(300px,auto)
+    grid-gap: 2em
+    @media screen and (min-width: 800px) and (max-width: 1000px)
+      grid-template-columns: repeat(2,1fr)
+      margin-left: 50px
+      margin-right: 50px
+    @media screen and (min-width: 400px) and (max-width: 800px)
+      grid-template-columns: 1fr
+      margin-left: 50px
+      margin-right: 50px
+    @media screen and (min-width: 100px) and (max-width: 500px)
+      margin: auto
+  .card-div
+    box-shadow: 1px 1px 5px $darkGrey
+    background-color: #fff
+    padding: 15px
+    h3
+      background-color: $lightPeach
+      color: $blackCoral
+      letter-spacing: 3px
+      text-transform: uppercase
+      text-align: center
+      padding: 10px
+      margin-top: 2%
+    h4
+      margin-left: 5%
+      color: $blackCoral
+    p
+      padding: 20px
+      padding-top: 0px
+    ul
+      padding: 20px
+      padding-top: 0px
+      list-style-type: none
+      li
+        padding: 10px
+        border-bottom: 1px solid $lightPeach
+
+    i
+      color: $peach
+      font-size: 1.3em
+      padding: 10px
+      cursor: pointer
+      float: right
+
+    i:hover
+      color: $darkPeach
+    input, textarea
+      margin: 15px
+      border: none
+      border-bottom: 2px solid $lightPeach
+      padding: 5px
+      width: 80%
+    span
+      font-weight: bold
+      color: $blackCoral
+      margin-top: 10px
+      margin-bottom: 10px
+      .commaNote
+        font-size: 12px
+        font-weight: lighter
+    textarea
+      border: 2px solid $lightPeach
+      height: 100px
+  .card-div:hover
+    box-shadow: 5px 5px 5px $darkGrey
+  .modalForm
+    display: none
+    position: absolute
+    top: 13%
+    width: 50%
+    left: 25%
+    right: 25%
+    margin-left: auto
+    margin-right: auto
+    background-color: #fff
+    box-shadow: 5px 5px 15px #999
+    color: $blackCoral
+    z-index: 10
+    @media screen and (min-width: 100px) and (max-width: 700px)
+      width: 80%
+      left: 10%
+      right: 10%
+    .modalHead
+      font-family: $header-font
+      width: 100%
+      text-align: center
+      color: $blackCoral
+      background-color: $lightPeach
+      padding: 5px 0px
+    .modalContent
+      padding: 10px 20px
+      span
+        font-weight: bold
+        .commaNote
+          font-size: 12px
+          font-weight: lighter
+          color: $blackCoral
+      input, textarea
+        margin: 5px 0px
+        padding: 5px
+        border: none
+        border-bottom: 2px solid $lightPeach
+        width: 100%
+      textarea
+        height: 70px
+    .modalFoot
+      width: 100%
+      color: $blackCoral
+      background-color: $lightPeach
+      display: flex
+      justify-content: flex-end
+      i
+        padding: 10px
+        cursor: pointer
+        color: $blackCoral
+      i:hover
+        font-weight: bolder
+  .pageMask
+    display: none
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: rgba(0,0,0,0.5)
